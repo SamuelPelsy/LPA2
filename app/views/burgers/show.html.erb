@@ -1,24 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @burger.name %>
-</p>
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <p>
+        <strong>Name:</strong>
+        <%= @burger.name %>
+      </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @burger.price %>
-</p>
+      <p>
+        <strong>Price:</strong>
+        <%= @burger.price %>
+      </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @burger.image %>
-</p>
+      <p>
+        <strong>Image:</strong>
+        <%= @burger.image %>
+      </p>
 
-<p>
-  <strong>Nutriscore:</strong>
-  <%= @burger.nutriscore %>
-</p>
+      <p>
+        <strong>Nutriscore:</strong>
+        <%= @burger.nutriscore %>
+      </p>
+    </div>
+  </div>
 
-<%= link_to 'Edit', edit_burger_path(@burger) %> |
-<%= link_to 'Back', burgers_path %>
+  <%= link_to 'Edit', edit_burger_path(@burger) %> |
+  <%= link_to 'Back', burgers_path %>
+</div>
