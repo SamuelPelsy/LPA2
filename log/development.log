@@ -2389,3 +2389,60 @@ Processing by BurgersController#index as HTML
 Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.2ms | Allocations: 7643)
 
 
+Started GET "/burgers/2" for 127.0.0.1 at 2020-03-07 14:02:05 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBurger Load (0.3ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+  Rendered burgers/show.html.erb within layouts/application (Duration: 278.4ms | Allocations: 5833)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 298ms (Views: 286.8ms | ActiveRecord: 0.3ms | Allocations: 18092)
+
+
+Started GET "/burgers" for 127.0.0.1 at 2020-03-07 14:41:12 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BurgersController#index as HTML
+  Rendering burgers/index.html.erb within layouts/application
+  [1m[36mBurger Load (0.2ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers"[0m
+  ↳ app/views/burgers/index.html.erb:21
+  Rendered burgers/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1275)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.2ms | Allocations: 8560)
+
+
+Started GET "/burgers.json" for 127.0.0.1 at 2020-03-07 14:41:12 +0100
+Processing by BurgersController#index as JSON
+  Rendering burgers/index.json.jbuilder
+  [1m[36mBurger Load (0.1ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers"[0m
+  ↳ app/views/burgers/index.json.jbuilder:1
+  Rendered burgers/_burger.json.jbuilder (Duration: 401.6ms | Allocations: 185569)
+  Rendered burgers/index.json.jbuilder (Duration: 403.8ms | Allocations: 186537)
+Completed 500 Internal Server Error in 407ms (ActiveRecord: 0.1ms | Allocations: 187999)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `get_nutriments' for #<#<Class:0x00007fad5cde2220>:0x00007fad6028e140>):
+    1: json.extract! burger, :id, :name, :price, :image, :nutriscore, :created_at, :updated_at, get_nutriments
+    2: json.url burger_url(burger, format: :json)
+  
+app/views/burgers/_burger.json.jbuilder:1
+app/views/burgers/index.json.jbuilder:1
+Started GET "/burgers.json" for 127.0.0.1 at 2020-03-07 14:41:19 +0100
+Processing by BurgersController#index as JSON
+  Rendering burgers/index.json.jbuilder
+  [1m[36mBurger Load (0.2ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers"[0m
+  ↳ app/views/burgers/index.json.jbuilder:1
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+  Rendered burgers/_burger.json.jbuilder (Duration: 278.1ms | Allocations: 6137)
+  Rendered burgers/_burger.json.jbuilder (Duration: 236.7ms | Allocations: 2207)
+  Rendered burgers/index.json.jbuilder (Duration: 519.0ms | Allocations: 10019)
+Completed 200 OK in 524ms (Views: 522.6ms | ActiveRecord: 0.2ms | Allocations: 11658)
+
+
