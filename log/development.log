@@ -2446,3 +2446,18 @@ You are setting a key that conflicts with a built-in method Openfoodfacts::Produ
 Completed 200 OK in 524ms (Views: 522.6ms | ActiveRecord: 0.2ms | Allocations: 11658)
 
 
+Started GET "/burgers/2" for 127.0.0.1 at 2020-03-07 14:58:45 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBurger Load (0.2ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+  Rendered burgers/show.html.erb within layouts/application (Duration: 281.7ms | Allocations: 6147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 302ms (Views: 292.5ms | ActiveRecord: 0.2ms | Allocations: 19199)
+
+

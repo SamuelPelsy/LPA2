@@ -1,7 +1,6 @@
 class Burger < ApplicationRecord
     def get_nutriments
         res = Array.new
-        res.push("Aucun nutriment")
         if(!self.code.nil?)
             product = Openfoodfacts::Product.get(self.code, locale: 'fr') 
             if(product.present?)
@@ -12,6 +11,8 @@ class Burger < ApplicationRecord
                     end
                 end
             end
+        else
+            res.push("Aucun nutriment")
         end
         return res
     end
