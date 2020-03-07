@@ -17,6 +17,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootstrap', '~> 4.0.0'
 # JQuery
 gem 'jquery-rails'
+# pg
+gem 'pg', '~> 1.2.2', group: :production
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -56,12 +58,6 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
-end
-
-group :production do 
-  #PostgreSQL for production
-  gem 'pg'
-  # or gem 'pg', '~> 1.2.2', group: :production
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
