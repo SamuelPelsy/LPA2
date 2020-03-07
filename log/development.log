@@ -959,3 +959,197 @@ Processing by BurgersController#index as HTML
 Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.3ms | Allocations: 7627)
 
 
+Started DELETE "/burgers/1" for 127.0.0.1 at 2020-03-07 11:57:45 +0100
+Processing by BurgersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Y9rghsGcxLg8PyUWpTStiDO18f7f+MLf9GmTTg2ni4CVYEdvFAKiNRMWchu6m01CnNWivhAxxJ2NAlMFB0D0fg==", "id"=>"1"}
+  [1m[36mBurger Load (0.2ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/burgers_controller.rb:57:in `destroy'
+  [1m[36mBurger Destroy (0.3ms)[0m  [1m[31mDELETE FROM "burgers" WHERE "burgers"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/burgers_controller.rb:57:in `destroy'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/burgers_controller.rb:57:in `destroy'
+Redirected to http://127.0.0.1:3000/burgers
+Completed 302 Found in 8ms (ActiveRecord: 1.8ms | Allocations: 3558)
+
+
+Started GET "/burgers" for 127.0.0.1 at 2020-03-07 11:57:45 +0100
+Processing by BurgersController#index as HTML
+  Rendering burgers/index.html.erb within layouts/application
+  [1m[36mBurger Load (0.1ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers"[0m
+  ↳ app/views/burgers/index.html.erb:21
+  Rendered burgers/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 604)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.1ms | Allocations: 6979)
+
+
+Started GET "/burgers/1" for 127.0.0.1 at 2020-03-07 11:59:53 +0100
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBurger Load (0.1ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1086)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Burger with 'id'=1):
+  
+app/controllers/burgers_controller.rb:67:in `set_burger'
+Started GET "/burgers/new" for 127.0.0.1 at 2020-03-07 12:01:55 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BurgersController#new as HTML
+  Rendering burgers/new.html.erb within layouts/application
+  Rendered burgers/_form.html.erb (Duration: 4.4ms | Allocations: 3459)
+  Rendered burgers/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 3961)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 48.0ms | ActiveRecord: 0.7ms | Allocations: 25710)
+
+
+Started POST "/burgers" for 127.0.0.1 at 2020-03-07 12:02:04 +0100
+Processing by BurgersController#create as HTML
+  Parameters: {"authenticity_token"=>"vsgsxGAGCTrTgT8IU7R+AZMTRCRGy6t70K1J5p9lI4lZPUSgb28FJUXRUY2OwCgY7UY8rS0NiDhyO5qgNFEHhA==", "burger"=>{"code"=>"2", "name"=>"burger", "price"=>"10", "image"=>"0", "nutriscore"=>"A"}, "commit"=>"Create Burger"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/burgers_controller.rb:30:in `block in create'
+  [1m[36mBurger Create (0.4ms)[0m  [1m[32mINSERT INTO "burgers" ("name", "price", "image", "nutriscore", "created_at", "updated_at", "code") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "burger"], ["price", 10.0], ["image", "0"], ["nutriscore", "A"], ["created_at", "2020-03-07 11:02:04.195777"], ["updated_at", "2020-03-07 11:02:04.195777"], ["code", "2"]]
+  ↳ app/controllers/burgers_controller.rb:30:in `block in create'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/burgers_controller.rb:30:in `block in create'
+Redirected to http://127.0.0.1:3000/burgers/2
+Completed 302 Found in 8ms (ActiveRecord: 1.9ms | Allocations: 3874)
+
+
+Started GET "/burgers/2" for 127.0.0.1 at 2020-03-07 12:02:04 +0100
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBurger Load (0.2ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+  Rendered burgers/show.html.erb within layouts/application (Duration: 277.5ms | Allocations: 6404)
+Completed 500 Internal Server Error in 281ms (ActiveRecord: 0.2ms | Allocations: 7937)
+
+
+  
+ActionView::Template::Error (undefined method `len' for #<Burger:0x00007fb2544db378>):
+    30: 
+    31:       <p>
+    32:         <strong>Nutriments:</strong>
+    33:         <%= @burger.nutriments %>
+    34:       </p>
+    35:     </div>
+    36:   </div>
+  
+app/models/burger.rb:4:in `nutriments'
+app/views/burgers/show.html.erb:33
+Started GET "/burgers/2" for 127.0.0.1 at 2020-03-07 12:02:29 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBurger Load (0.2ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+  Rendered burgers/show.html.erb within layouts/application (Duration: 260.8ms | Allocations: 6394)
+Completed 500 Internal Server Error in 279ms (ActiveRecord: 0.8ms | Allocations: 15633)
+
+
+  
+ActionView::Template::Error (undefined method `lenght' for #<Burger:0x00007f5dbc00f368>):
+    30: 
+    31:       <p>
+    32:         <strong>Nutriments:</strong>
+    33:         <%= @burger.nutriments %>
+    34:       </p>
+    35:     </div>
+    36:   </div>
+  
+app/models/burger.rb:4:in `nutriments'
+app/views/burgers/show.html.erb:33
+Started GET "/burgers/2" for 127.0.0.1 at 2020-03-07 12:02:44 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1547)
+
+
+  
+SyntaxError (/home/sam/Documents/LP71/LPA2/app/models/burger.rb:5: syntax error, unexpected end-of-input, expecting end):
+  
+app/models/burger.rb:5: syntax error, unexpected end-of-input, expecting end
+app/models/burger.rb:5: syntax error, unexpected end-of-input, expecting end
+app/models/burger.rb:5: syntax error, unexpected end-of-input, expecting end
+app/controllers/burgers_controller.rb:67:in `set_burger'
+Started GET "/burgers/2" for 127.0.0.1 at 2020-03-07 12:03:01 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBurger Load (0.2ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+  Rendered burgers/show.html.erb within layouts/application (Duration: 228.0ms | Allocations: 6326)
+Completed 500 Internal Server Error in 247ms (ActiveRecord: 0.8ms | Allocations: 15421)
+
+
+  
+ActionView::Template::Error (undefined method `lenght' for #<Burger:0x00007f8368eb8e60>):
+    30: 
+    31:       <p>
+    32:         <strong>Nutriments:</strong>
+    33:         <%= @burger.nutriments %>
+    34:       </p>
+    35:     </div>
+    36:   </div>
+  
+app/models/burger.rb:4:in `nutriments'
+app/views/burgers/show.html.erb:33
+Started GET "/burgers/2" for 127.0.0.1 at 2020-03-07 12:03:53 +0100
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBurger Load (0.1ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+  Rendered burgers/show.html.erb within layouts/application (Duration: 287.2ms | Allocations: 5316)
+Completed 500 Internal Server Error in 289ms (ActiveRecord: 0.1ms | Allocations: 6310)
+
+
+  
+ActionView::Template::Error (undefined method `lenght' for #<Burger:0x00007f8368bec100>):
+    30: 
+    31:       <p>
+    32:         <strong>Nutriments:</strong>
+    33:         <%= @burger.nutriments %>
+    34:       </p>
+    35:     </div>
+    36:   </div>
+  
+app/models/burger.rb:4:in `nutriments'
+app/views/burgers/show.html.erb:33
+Started GET "/burgers/2" for 127.0.0.1 at 2020-03-07 12:04:10 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBurger Load (0.2ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+  Rendered burgers/show.html.erb within layouts/application (Duration: 223.2ms | Allocations: 3017)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 288ms (Views: 270.7ms | ActiveRecord: 0.9ms | Allocations: 25882)
+
+
+Started GET "/burgers/2" for 127.0.0.1 at 2020-03-07 12:04:45 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBurger Load (0.2ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+  Rendered burgers/show.html.erb within layouts/application (Duration: 251.7ms | Allocations: 3010)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 310ms (Views: 294.3ms | ActiveRecord: 0.8ms | Allocations: 25808)
+
+
