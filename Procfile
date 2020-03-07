@@ -1,5 +1,5 @@
-# Specify version
-release: bundle exec rails db:migrate
+# create db
+web: bin/rails db:migrate
 
 # launch server
-web: bundle exec rails server -p $PORT -e $RAILS_ENV
+web: bin/rails server -p $PORT -e $RAILS_ENV
