@@ -27,13 +27,27 @@
         <strong>Nutriscore:</strong>
         <%= @burger.nutriscore %>
       </p>
+    </div>
 
-      <p>
-        <strong>Nutriments:</strong>
-        <% @burger.get_nutriments.each do |ele| %>
-          <div> - <%= ele %></div>
-        <% end %>
-      </p>
+
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Liste des nutriments
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body">
+            <% @burger.get_nutriments.each do |ele| %>
+              <div> - <%= ele %></div>
+            <% end %>           
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
