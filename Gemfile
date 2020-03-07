@@ -55,6 +55,7 @@ end
 group :production do 
   #PostgreSQL for production
   gem 'pg', '~> 1.2.2'
+  # or gem 'pg', '~> 1.2.2', group: :production
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
