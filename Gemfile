@@ -28,6 +28,12 @@ gem 'jquery-rails'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+# API open food fact
+# install dependency
+gem 'hashie', '~> 3.4'
+# open food fact
+gem 'openfoodfacts', '>= 0.5.1'
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.4'
