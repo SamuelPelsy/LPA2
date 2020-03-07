@@ -847,3 +847,115 @@ Migrating to AddCodeToBurgers (20200307104410)
   [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2020-03-07 11:53:10 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/sam/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/sam/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.2.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.7ms | Allocations: 655)
+Completed 200 OK in 18ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 2174)
+
+
+Started GET "/burgers" for 127.0.0.1 at 2020-03-07 11:53:14 +0100
+Processing by BurgersController#index as HTML
+  Rendering burgers/index.html.erb within layouts/application
+  [1m[36mBurger Load (0.2ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers"[0m
+  ↳ app/views/burgers/index.html.erb:21
+  Rendered burgers/index.html.erb within layouts/application (Duration: 24.8ms | Allocations: 6776)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 80ms (Views: 76.0ms | ActiveRecord: 0.9ms | Allocations: 22419)
+
+
+Started GET "/burgers/1/edit" for 127.0.0.1 at 2020-03-07 11:53:26 +0100
+Processing by BurgersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBurger Load (0.3ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/edit.html.erb within layouts/application
+  Rendered burgers/_form.html.erb (Duration: 7.6ms | Allocations: 3428)
+  Rendered burgers/edit.html.erb within layouts/application (Duration: 8.7ms | Allocations: 3842)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.3ms | ActiveRecord: 0.3ms | Allocations: 11301)
+
+
+Started PATCH "/burgers/1" for 127.0.0.1 at 2020-03-07 11:53:28 +0100
+Processing by BurgersController#update as HTML
+  Parameters: {"authenticity_token"=>"IpUjObjLLR/HY8r3+GUr0abRK2QCvd2cU3gl8g/2ErAHOyV9/2zVChWW/fvJDogGKxN3W53g3ep0daTF37As9g==", "burger"=>{"code"=>"1", "name"=>"test", "price"=>"0.0", "image"=>"test", "nutriscore"=>"5"}, "commit"=>"Update Burger", "id"=>"1"}
+  [1m[36mBurger Load (0.2ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+[31mUnpermitted parameter: :code[0m
+Redirected to http://127.0.0.1:3000/burgers/1
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 1362)
+
+
+Started GET "/burgers/1" for 127.0.0.1 at 2020-03-07 11:53:28 +0100
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBurger Load (0.6ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+  Rendered burgers/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 347)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 0.6ms | Allocations: 7370)
+
+
+Started GET "/burgers" for 127.0.0.1 at 2020-03-07 11:53:34 +0100
+Processing by BurgersController#index as HTML
+  Rendering burgers/index.html.erb within layouts/application
+  [1m[36mBurger Load (0.1ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers"[0m
+  ↳ app/views/burgers/index.html.erb:21
+  Rendered burgers/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 749)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.1ms | Allocations: 7123)
+
+
+Started GET "/burgers/1/edit" for 127.0.0.1 at 2020-03-07 11:53:37 +0100
+Processing by BurgersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBurger Load (0.2ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/edit.html.erb within layouts/application
+  Rendered burgers/_form.html.erb (Duration: 3.2ms | Allocations: 1342)
+  Rendered burgers/edit.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1459)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 19.2ms | ActiveRecord: 0.2ms | Allocations: 8331)
+
+
+Started PATCH "/burgers/1" for 127.0.0.1 at 2020-03-07 11:54:36 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BurgersController#update as HTML
+  Parameters: {"authenticity_token"=>"bm2+oGz8ofDbAh4id4AVlo1+4YwSlZU3ohKRNgiZgFxLw7jkK1tZ5Qn3KS5G67ZBALy9s43IlUGFHxAB2N++Gg==", "burger"=>{"code"=>"2", "name"=>"test", "price"=>"0.0", "image"=>"test", "nutriscore"=>"5"}, "commit"=>"Update Burger", "id"=>"1"}
+  [1m[36mBurger Load (0.2ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/burgers_controller.rb:44:in `block in update'
+  [1m[36mBurger Update (0.4ms)[0m  [1m[33mUPDATE "burgers" SET "code" = ?, "updated_at" = ? WHERE "burgers"."id" = ?[0m  [["code", "2"], ["updated_at", "2020-03-07 10:54:36.433784"], ["id", 1]]
+  ↳ app/controllers/burgers_controller.rb:44:in `block in update'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/burgers_controller.rb:44:in `block in update'
+Redirected to http://127.0.0.1:3000/burgers/1
+Completed 302 Found in 22ms (ActiveRecord: 2.5ms | Allocations: 10686)
+
+
+Started GET "/burgers/1" for 127.0.0.1 at 2020-03-07 11:54:36 +0100
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBurger Load (0.1ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+  Rendered burgers/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 570)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 43.9ms | ActiveRecord: 0.1ms | Allocations: 17181)
+
+
+Started GET "/burgers" for 127.0.0.1 at 2020-03-07 11:54:38 +0100
+Processing by BurgersController#index as HTML
+  Rendering burgers/index.html.erb within layouts/application
+  [1m[36mBurger Load (0.3ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers"[0m
+  ↳ app/views/burgers/index.html.erb:21
+  Rendered burgers/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1111)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.3ms | Allocations: 7627)
+
+
