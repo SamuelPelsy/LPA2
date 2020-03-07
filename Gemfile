@@ -60,7 +60,7 @@ end
 
 group :production do 
   #PostgreSQL for production
-  gem 'pg', '~> 1.2.2'
+  gem 'pg'
   # or gem 'pg', '~> 1.2.2', group: :production
 end
 
