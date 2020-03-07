@@ -1865,3 +1865,340 @@ Processing by BurgersController#index as HTML
 Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.1ms | Allocations: 7124)
 
 
+Started GET "/burgers" for 127.0.0.1 at 2020-03-07 13:02:07 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BurgersController#index as HTML
+  Rendering burgers/index.html.erb within layouts/application
+  [1m[36mBurger Load (0.2ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers"[0m
+  ↳ app/views/burgers/index.html.erb:21
+  Rendered burgers/index.html.erb within layouts/application (Duration: 14.4ms | Allocations: 5780)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 47ms (Views: 43.6ms | ActiveRecord: 0.2ms | Allocations: 13455)
+
+
+Started GET "/burgers/2" for 127.0.0.1 at 2020-03-07 13:02:08 +0100
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBurger Load (0.3ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+  Rendered burgers/show.html.erb within layouts/application (Duration: 272.3ms | Allocations: 6232)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 283ms (Views: 279.8ms | ActiveRecord: 0.3ms | Allocations: 13355)
+
+
+Started GET "/burgers" for 127.0.0.1 at 2020-03-07 13:04:58 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BurgersController#index as HTML
+  Rendering burgers/index.html.erb within layouts/application
+  [1m[36mBurger Load (0.2ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers"[0m
+  ↳ app/views/burgers/index.html.erb:21
+  Rendered burgers/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 5885)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.7ms | Allocations: 12837)
+
+
+Started GET "/burgers/new" for 127.0.0.1 at 2020-03-07 13:04:59 +0100
+Processing by BurgersController#new as HTML
+  Rendering burgers/new.html.erb within layouts/application
+  Rendered burgers/_form.html.erb (Duration: 9.2ms | Allocations: 3367)
+  Rendered burgers/new.html.erb within layouts/application (Duration: 10.1ms | Allocations: 3730)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 29.4ms | ActiveRecord: 0.0ms | Allocations: 10264)
+
+
+Started POST "/burgers" for 127.0.0.1 at 2020-03-07 13:05:06 +0100
+Processing by BurgersController#create as HTML
+  Parameters: {"authenticity_token"=>"QcLF11Asnquwj47deTzuPAbUgdPXqRkRCTE/PXU1BX94Tk8WhXgaP8E3X5pgEt/sBSzdX9RyhQ375Xr/my5x2Q==", "burger"=>{"code"=>"0", "name"=>"sasa", "price"=>"50", "image"=>"0", "nutriscore"=>"A"}, "commit"=>"Create Burger"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/burgers_controller.rb:30:in `block in create'
+  [1m[36mBurger Create (0.3ms)[0m  [1m[32mINSERT INTO "burgers" ("name", "price", "image", "nutriscore", "created_at", "updated_at", "code") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "sasa"], ["price", 50.0], ["image", "0"], ["nutriscore", "A"], ["created_at", "2020-03-07 12:05:06.804707"], ["updated_at", "2020-03-07 12:05:06.804707"], ["code", "0"]]
+  ↳ app/controllers/burgers_controller.rb:30:in `block in create'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/burgers_controller.rb:30:in `block in create'
+Redirected to http://127.0.0.1:3000/burgers/3
+Completed 302 Found in 9ms (ActiveRecord: 1.8ms | Allocations: 3828)
+
+
+Started GET "/burgers/3" for 127.0.0.1 at 2020-03-07 13:05:06 +0100
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBurger Load (0.2ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+  Rendered burgers/show.html.erb within layouts/application (Duration: 301.4ms | Allocations: 2366)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 316ms (Views: 314.1ms | ActiveRecord: 0.2ms | Allocations: 9362)
+
+
+Started GET "/burgers/3/edit" for 127.0.0.1 at 2020-03-07 13:05:12 +0100
+Processing by BurgersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBurger Load (0.1ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/edit.html.erb within layouts/application
+  Rendered burgers/_form.html.erb (Duration: 2.6ms | Allocations: 1375)
+  Rendered burgers/edit.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1644)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.1ms | Allocations: 8648)
+
+
+Started PATCH "/burgers/3" for 127.0.0.1 at 2020-03-07 13:05:15 +0100
+Processing by BurgersController#update as HTML
+  Parameters: {"authenticity_token"=>"lBIfzKFxH3Jj8j2cBCdM+99Vc4M8AdmAdSLEmT+9hZVgkRty53Ge4yXKCurSAIDRaDWvfUI1qFMYr8pFT9XwGw==", "burger"=>{"code"=>"2", "name"=>"sasa", "price"=>"50.0", "image"=>"0", "nutriscore"=>"A"}, "commit"=>"Update Burger", "id"=>"3"}
+  [1m[36mBurger Load (0.1ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/burgers_controller.rb:44:in `block in update'
+  [1m[36mBurger Update (0.3ms)[0m  [1m[33mUPDATE "burgers" SET "code" = ?, "updated_at" = ? WHERE "burgers"."id" = ?[0m  [["code", "2"], ["updated_at", "2020-03-07 12:05:15.055222"], ["id", 3]]
+  ↳ app/controllers/burgers_controller.rb:44:in `block in update'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/burgers_controller.rb:44:in `block in update'
+Redirected to http://127.0.0.1:3000/burgers/3
+Completed 302 Found in 9ms (ActiveRecord: 1.8ms | Allocations: 4190)
+
+
+Started GET "/burgers/3" for 127.0.0.1 at 2020-03-07 13:05:15 +0100
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBurger Load (0.1ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+  Rendered burgers/show.html.erb within layouts/application (Duration: 348.2ms | Allocations: 2187)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 361ms (Views: 359.4ms | ActiveRecord: 0.1ms | Allocations: 9061)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/burgers/3" for 127.0.0.1 at 2020-03-07 13:06:19 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBurger Load (0.1ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+  Rendered burgers/show.html.erb within layouts/application (Duration: 206.7ms | Allocations: 2443)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 226ms (Views: 217.2ms | ActiveRecord: 0.7ms | Allocations: 15004)
+
+
+Started GET "/burgers" for 127.0.0.1 at 2020-03-07 13:06:22 +0100
+Processing by BurgersController#index as HTML
+  Rendering burgers/index.html.erb within layouts/application
+  [1m[36mBurger Load (0.4ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers"[0m
+  ↳ app/views/burgers/index.html.erb:21
+  Rendered burgers/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 953)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.4ms | Allocations: 7307)
+
+
+Started GET "/burgers/2" for 127.0.0.1 at 2020-03-07 13:06:25 +0100
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBurger Load (0.2ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+  Rendered burgers/show.html.erb within layouts/application (Duration: 237.6ms | Allocations: 5628)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 248ms (Views: 245.5ms | ActiveRecord: 0.2ms | Allocations: 12487)
+
+
+Started GET "/burgers" for 127.0.0.1 at 2020-03-07 13:06:32 +0100
+Processing by BurgersController#index as HTML
+  Rendering burgers/index.html.erb within layouts/application
+  [1m[36mBurger Load (0.2ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers"[0m
+  ↳ app/views/burgers/index.html.erb:21
+  Rendered burgers/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 877)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.2ms | Allocations: 7652)
+
+
+Started GET "/burgers/3" for 127.0.0.1 at 2020-03-07 13:06:34 +0100
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBurger Load (0.1ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+  Rendered burgers/show.html.erb within layouts/application (Duration: 210.4ms | Allocations: 2309)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 233ms (Views: 222.4ms | ActiveRecord: 0.1ms | Allocations: 9541)
+
+
+Started GET "/burgers/3/edit" for 127.0.0.1 at 2020-03-07 13:08:28 +0100
+Processing by BurgersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBurger Load (0.2ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/edit.html.erb within layouts/application
+  Rendered burgers/_form.html.erb (Duration: 2.2ms | Allocations: 1353)
+  Rendered burgers/edit.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1475)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.2ms | Allocations: 8749)
+
+
+Started PATCH "/burgers/3" for 127.0.0.1 at 2020-03-07 13:08:31 +0100
+Processing by BurgersController#update as HTML
+  Parameters: {"authenticity_token"=>"Feb0rRhJz+0GNA31GM2sT92v9IuRZuImxX6PJzjwrmXhZfATXklOfEAMOoPO6mBlas8ode9Sk/Wo84H7SJjb6w==", "burger"=>{"code"=>"-2", "name"=>"sasa", "price"=>"50.0", "image"=>"0", "nutriscore"=>"A"}, "commit"=>"Update Burger", "id"=>"3"}
+  [1m[36mBurger Load (0.1ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/burgers_controller.rb:44:in `block in update'
+  [1m[36mBurger Update (0.4ms)[0m  [1m[33mUPDATE "burgers" SET "code" = ?, "updated_at" = ? WHERE "burgers"."id" = ?[0m  [["code", "-2"], ["updated_at", "2020-03-07 12:08:31.131726"], ["id", 3]]
+  ↳ app/controllers/burgers_controller.rb:44:in `block in update'
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/burgers_controller.rb:44:in `block in update'
+Redirected to http://127.0.0.1:3000/burgers/3
+Completed 302 Found in 10ms (ActiveRecord: 2.0ms | Allocations: 4186)
+
+
+Started GET "/burgers/3" for 127.0.0.1 at 2020-03-07 13:08:31 +0100
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBurger Load (0.1ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+  Rendered burgers/show.html.erb within layouts/application (Duration: 203.8ms | Allocations: 2114)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 216ms (Views: 214.4ms | ActiveRecord: 0.1ms | Allocations: 8990)
+
+
+Started GET "/burgers/3" for 127.0.0.1 at 2020-03-07 13:15:36 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBurger Load (0.2ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+  Rendered burgers/show.html.erb within layouts/application (Duration: 267.9ms | Allocations: 5637)
+Completed 500 Internal Server Error in 278ms (ActiveRecord: 0.2ms | Allocations: 12006)
+
+
+  
+ActionView::Template::Error (undefined method `nutriments=' for #<Burger:0x0000564ede7f4760>
+Did you mean?  nutriments):
+    30: 
+    31:       <p>
+    32:         <strong>Nutriments:</strong>
+    33:         <% @burger.nutriments.each do |ele| %>
+    34:           <div> - <%= ele %></div>
+    35:         <% end %>
+    36:       </p>
+  
+app/models/burger.rb:15:in `nutriments'
+app/views/burgers/show.html.erb:33
+Started GET "/burgers/3" for 127.0.0.1 at 2020-03-07 13:15:46 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBurger Load (0.1ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+  Rendered burgers/show.html.erb within layouts/application (Duration: 207.2ms | Allocations: 2452)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 227ms (Views: 217.1ms | ActiveRecord: 0.7ms | Allocations: 15235)
+
+
+Started GET "/burgers/3" for 127.0.0.1 at 2020-03-07 13:15:55 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBurger Load (0.1ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+  Rendered burgers/show.html.erb within layouts/application (Duration: 227.6ms | Allocations: 5219)
+Completed 500 Internal Server Error in 239ms (ActiveRecord: 1.0ms | Allocations: 11935)
+
+
+  
+ActionView::Template::Error (undefined method `nutriments=' for #<Burger:0x00007fad5ceaa8d8>
+Did you mean?  nutriments):
+    30: 
+    31:       <p>
+    32:         <strong>Nutriments:</strong>
+    33:         <% @burger.nutriments.each do |ele| %>
+    34:           <div> - <%= ele %></div>
+    35:         <% end %>
+    36:       </p>
+  
+app/models/burger.rb:15:in `nutriments'
+app/views/burgers/show.html.erb:33
+Started GET "/burgers/3" for 127.0.0.1 at 2020-03-07 13:16:09 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBurger Load (0.1ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+  Rendered burgers/show.html.erb within layouts/application (Duration: 207.7ms | Allocations: 2347)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 228ms (Views: 218.3ms | ActiveRecord: 0.8ms | Allocations: 14984)
+
+
+Started GET "/burgers/3" for 127.0.0.1 at 2020-03-07 13:17:38 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBurger Load (0.1ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+  Rendered burgers/show.html.erb within layouts/application (Duration: 205.1ms | Allocations: 2346)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 236ms (Views: 219.4ms | ActiveRecord: 0.7ms | Allocations: 14986)
+
+
+Started GET "/burgers/178" for 127.0.0.1 at 2020-03-07 13:17:42 +0100
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"178"}
+  [1m[36mBurger Load (0.1ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 178], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1066)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Burger with 'id'=178):
+  
+app/controllers/burgers_controller.rb:67:in `set_burger'
+Started GET "/burgers/3" for 127.0.0.1 at 2020-03-07 13:17:51 +0100
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBurger Load (0.1ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+  Rendered burgers/show.html.erb within layouts/application (Duration: 213.2ms | Allocations: 2166)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 224ms (Views: 222.1ms | ActiveRecord: 0.1ms | Allocations: 9034)
+
+
+Started GET "/burgers/3" for 127.0.0.1 at 2020-03-07 13:19:21 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBurger Load (0.1ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+  Rendered burgers/show.html.erb within layouts/application (Duration: 259.0ms | Allocations: 2659)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 279ms (Views: 269.9ms | ActiveRecord: 0.8ms | Allocations: 16080)
+
+

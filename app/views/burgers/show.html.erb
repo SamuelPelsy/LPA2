@@ -30,7 +30,7 @@
 
       <p>
         <strong>Nutriments:</strong>
-        <% @burger.nutriments.each do |ele| %>
+        <% @burger.get_nutriments.each do |ele| %>
           <div> - <%= ele %></div>
         <% end %>
       </p>

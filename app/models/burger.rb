@@ -1,5 +1,5 @@
 class Burger < ApplicationRecord
-    def nutriments
+    def get_nutriments
         res = Array.new
         product = Openfoodfacts::Product.get(self.code, locale: 'fr')
         nutri = product.nutriments.to_hash
