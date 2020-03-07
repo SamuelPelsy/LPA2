@@ -4,7 +4,7 @@ class Burger < ApplicationRecord
         res.push("Aucun nutriment")
         if(!self.code.nil?)
             product = Openfoodfacts::Product.get(self.code, locale: 'fr') 
-            if(!product.present?)
+            if(product.present?)
                 nutri = product.nutriments.to_hash
                 if nutri.count != 0
                     for ele in nutri

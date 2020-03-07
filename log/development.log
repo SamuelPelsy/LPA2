@@ -2266,3 +2266,126 @@ Processing by BurgersController#show as HTML
 Completed 200 OK in 256ms (Views: 253.7ms | ActiveRecord: 0.1ms | Allocations: 9396)
 
 
+Started GET "/burgers/3" for 127.0.0.1 at 2020-03-07 13:44:36 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBurger Load (0.2ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+  Rendered burgers/show.html.erb within layouts/application (Duration: 213.6ms | Allocations: 2343)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 235ms (Views: 225.9ms | ActiveRecord: 0.2ms | Allocations: 14618)
+
+
+Started GET "/burgers" for 127.0.0.1 at 2020-03-07 13:44:38 +0100
+Processing by BurgersController#index as HTML
+  Rendering burgers/index.html.erb within layouts/application
+  [1m[36mBurger Load (0.2ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers"[0m
+  ↳ app/views/burgers/index.html.erb:21
+  Rendered burgers/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1640)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.2ms | Allocations: 8176)
+
+
+Started GET "/burgers/2/edit" for 127.0.0.1 at 2020-03-07 13:44:40 +0100
+Processing by BurgersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBurger Load (0.2ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/edit.html.erb within layouts/application
+  Rendered burgers/_form.html.erb (Duration: 3.0ms | Allocations: 1353)
+  Rendered burgers/edit.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1470)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 0.2ms | Allocations: 8739)
+
+
+Started GET "/burgers" for 127.0.0.1 at 2020-03-07 13:44:41 +0100
+Processing by BurgersController#index as HTML
+  Rendering burgers/index.html.erb within layouts/application
+  [1m[36mBurger Load (0.1ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers"[0m
+  ↳ app/views/burgers/index.html.erb:21
+  Rendered burgers/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 877)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.1ms | Allocations: 7638)
+
+
+Started GET "/burgers/2" for 127.0.0.1 at 2020-03-07 13:44:42 +0100
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBurger Load (0.1ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+  Rendered burgers/show.html.erb within layouts/application (Duration: 214.8ms | Allocations: 5623)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 225ms (Views: 222.8ms | ActiveRecord: 0.1ms | Allocations: 12542)
+
+
+Started GET "/burgers" for 127.0.0.1 at 2020-03-07 13:44:48 +0100
+Processing by BurgersController#index as HTML
+  Rendering burgers/index.html.erb within layouts/application
+  [1m[36mBurger Load (0.1ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers"[0m
+  ↳ app/views/burgers/index.html.erb:21
+  Rendered burgers/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 877)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.1ms | Allocations: 7641)
+
+
+Started GET "/burgers/3" for 127.0.0.1 at 2020-03-07 13:44:55 +0100
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBurger Load (0.3ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+  Rendered burgers/show.html.erb within layouts/application (Duration: 210.0ms | Allocations: 2579)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 219ms (Views: 217.0ms | ActiveRecord: 0.3ms | Allocations: 9445)
+
+
+Started GET "/burgers" for 127.0.0.1 at 2020-03-07 13:44:56 +0100
+Processing by BurgersController#index as HTML
+  Rendering burgers/index.html.erb within layouts/application
+  [1m[36mBurger Load (0.1ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers"[0m
+  ↳ app/views/burgers/index.html.erb:21
+  Rendered burgers/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 877)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.1ms | Allocations: 7652)
+
+
+Started GET "/burgers" for 127.0.0.1 at 2020-03-07 13:45:11 +0100
+Processing by BurgersController#index as HTML
+  Rendering burgers/index.html.erb within layouts/application
+  [1m[36mBurger Load (0.2ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers"[0m
+  ↳ app/views/burgers/index.html.erb:21
+  Rendered burgers/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 877)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.2ms | Allocations: 7232)
+
+
+Started GET "/burgers/2" for 127.0.0.1 at 2020-03-07 13:45:13 +0100
+Processing by BurgersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBurger Load (0.2ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers" WHERE "burgers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/burgers_controller.rb:67:in `set_burger'
+  Rendering burgers/show.html.erb within layouts/application
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+You are setting a key that conflicts with a built-in method Openfoodfacts::Product#display defined in Kernel. This can cause unexpected behavior when accessing the key as a property. You can still access the key via the #[] method.
+  Rendered burgers/show.html.erb within layouts/application (Duration: 218.2ms | Allocations: 5820)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 230ms (Views: 227.7ms | ActiveRecord: 0.2ms | Allocations: 12681)
+
+
+Started GET "/burgers" for 127.0.0.1 at 2020-03-07 13:45:15 +0100
+Processing by BurgersController#index as HTML
+  Rendering burgers/index.html.erb within layouts/application
+  [1m[36mBurger Load (0.2ms)[0m  [1m[34mSELECT "burgers".* FROM "burgers"[0m
+  ↳ app/views/burgers/index.html.erb:21
+  Rendered burgers/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 877)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.2ms | Allocations: 7643)
+
+
