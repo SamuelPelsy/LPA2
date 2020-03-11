@@ -42,9 +42,26 @@
 
         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
           <div class="card-body">
-            <% @burger.get_nutriments.each do |ele| %>
-              <div> - <%= ele %></div>
-            <% end %>           
+
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Element</th>
+                  <th scope="col">Valeur</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                  <% @burger.get_nutriments.each do |ele| %>
+                  <tr>
+                    <td><%= ele[0] %></td>
+                    <td><%= ele[1] %></td>
+                  </tr>
+                  <% end %> 
+              </tbody>
+            </table>
+      
           </div>
         </div>
       </div>
